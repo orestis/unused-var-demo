@@ -1,4 +1,4 @@
-{:lint-as {unused-var-demo.macro/defsection clojure.core/def}
+{:hooks {:macroexpand {unused-var-demo.macro/defsection unused-var-demo.macro/defsection}}
  :linters {:clojure-lsp/unused-public-var
            {:exclude #{unused-var-demo.demo/Bar}
             :exclude-when-defined-by
